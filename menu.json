@@ -1,0 +1,58 @@
+
+{
+  "menu": [
+    {
+      "nombre": "Inicio",
+      "icono": "🏠",
+      "enlace": "#inicio"
+    },
+    {
+      "nombre": "Rutas",
+      "icono": "🚌",
+      "submenu": [
+        {
+          "nombre": "Tamboril - Santiago",
+          "enlace": "#tamboril-santiago"
+        },
+        {
+          "nombre": "Santiago - Tamboril",
+          "enlace": "#santiago-tamboril"
+        }
+      ]
+    },
+   {
+  "nombre": "Horarios de Autobuses",
+  "icono": "🚍",
+  "enlace": "#horarios"
+},
+    {
+      "nombre": "Tarifas",
+      "icono": "💰",
+      "enlace": "#tarifas"
+    },
+    {
+      "nombre": "Incidencias",
+      "icono": "⚠️",
+      "submenu": [
+        {
+          "nombre": "Reportar incidencia",
+          "enlace": "#reportar"
+        },
+        {
+          "nombre": "Consultar reportes",
+          "enlace": "#consultar"
+        }
+      ]
+    },
+    {
+      "nombre": "Acerca de nosotros",
+      "icono": "ℹ️",
+      "enlace": "#acerca"
+    },
+    {
+      "nombre": "Contacto",
+      "icono": "📞",
+      "enlace": "#contacto"
+    }
+  ]
+}

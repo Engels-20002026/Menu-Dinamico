@@ -1,0 +1,262 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #263445;
+    line-height: 1.6;
+}
+
+/* BARRA DE NAVEGACIÓN */
+header {
+    background-color: #102c46;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* MENÚ DINÁMICO */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a,
+.submenu-toggle {
+    display: block;
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.menu a:hover,
+.submenu-toggle:hover {
+    background-color: #1c5279;
+}
+
+/* SUBMENÚ */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 210px;
+    background-color: white;
+    list-style: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.menu li.open > .submenu {
+    display: block;
+}
+
+.submenu a {
+    color: #263445;
+    padding: 12px 15px;
+    border-radius: 0;
+}
+
+.submenu a:hover {
+    background-color: #e8f1f8;
+    color: #12649b;
+}
+
+/* BOTÓN MÓVIL */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* PORTADA */
+.hero {
+    min-height: 440px;
+    background: linear-gradient(120deg, #102c46, #176b87);
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.etiqueta {
+    color: #f9c74f;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #f9c74f;
+    color: #102c46;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #ffd976;
+    transform: translateY(-2px);
+}
+
+/* SECCIONES */
+.seccion {
+    max-width: 1100px;
+    margin: auto;
+    padding: 65px 25px;
+    scroll-margin-top: 75px;
+}
+
+.seccion h2 {
+    color: #102c46;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.seccion > p {
+    color: #667788;
+}
+
+/* TARJETAS */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.tarjeta {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e5eaf0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta h3 {
+    color: #176b87;
+    margin-bottom: 10px;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #102c46;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu a,
+    .submenu-toggle {
+        width: 100%;
+        text-align: left;
+    }
+
+    .submenu {
+        position: static;
+        box-shadow: none;
+        background-color: #1c405c;
+        width: 100%;
+        padding-left: 15px;
+    }
+
+    .submenu a {
+        color: white;
+    }
+
+    .submenu a:hover {
+        background-color: #1c5279;
+        color: white;
+    }
+}
